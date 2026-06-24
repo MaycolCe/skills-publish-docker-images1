@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Log in to the Container registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -23,6 +23,6 @@ jobs:
       - name: Build and push Docker image
         run: |
           docker build . --tag ghcr.io/maycolce/skills-publish-docker-images1/stackoverflown:main
-          docker push ghcr.io/maycolce/skills-publish-dockerimages1/stackoverflown:main
+          docker push ghcr.io/maycolce/skills-publish-docker-images1/stackoverflown:main
 
 
